@@ -1,138 +1,138 @@
 {
-  "generated_at_amsterdam": "Not run yet",
-  "price_as_of": "Not fetched yet",
-  "signal": "UNKNOWN",
-  "headline": "Run the first update to populate market data",
-  "reason": "Quarterly SEC filings preloaded. No unsourced ETF flows or fund trades.",
+  "generated_at_amsterdam": "2026-11-23 14:06 CET",
+  "price_as_of": "2026-11-20",
+  "signal": "RED",
+  "headline": "Semiconductor recovery not confirmed",
+  "reason": "Price signals are updated automatically. Institutional flows/trades remain unconfirmed unless dated primary-source evidence has been added.",
   "gates": [
     {
-      "name": "ETF price stabilization",
-      "status": "UNKNOWN",
-      "detail": "Awaiting prices"
+      "name": "Both ETF price trends",
+      "status": "RED",
+      "detail": "3 weeks above 4-week mean, no new 13-week lows"
     },
     {
-      "name": "Verified ETF flows",
+      "name": "Verified weekly ETF flows",
       "status": "YELLOW",
-      "detail": "No sourced full-week data"
+      "detail": "0 positive documented week(s); need 2"
     },
     {
-      "name": "Dated institutional net buying",
+      "name": "Dated large-investor net buying",
       "status": "YELLOW",
-      "detail": "No sourced current events"
+      "detail": "0 distinct confirmed manager(s); need 2"
     }
   ],
   "assets": [
     {
       "ticker": "SMH",
       "role": "Market ETF",
-      "last_close": null,
+      "last_close": 400.06,
       "four_closes": [
-        null,
-        null,
-        null,
-        null
+        522.49,
+        463.96,
+        486.75,
+        400.06
       ],
-      "three_week_return": null,
-      "signal": "UNKNOWN",
-      "note": "Run scheduled update to fetch prices; no synthetic values."
+      "three_week_return": -0.23432,
+      "signal": "RED",
+      "note": "Price trend only; flow and fund trade confirmation separate."
     },
     {
       "ticker": "SOXX",
       "role": "Market ETF",
-      "last_close": null,
+      "last_close": 123.4,
       "four_closes": [
-        null,
-        null,
-        null,
-        null
+        157.17,
+        136.53,
+        149.3,
+        123.4
       ],
-      "three_week_return": null,
-      "signal": "UNKNOWN",
-      "note": "Run scheduled update to fetch prices; no synthetic values."
+      "three_week_return": -0.21486,
+      "signal": "RED",
+      "note": "Price trend only; flow and fund trade confirmation separate."
     },
     {
       "ticker": "MU",
       "role": "HBM / memory",
-      "last_close": null,
+      "last_close": 594.51,
       "four_closes": [
-        null,
-        null,
-        null,
-        null
+        884.74,
+        690.0,
+        778.31,
+        594.51
       ],
-      "three_week_return": null,
-      "signal": "UNKNOWN",
-      "note": "Run scheduled update to fetch prices; no synthetic values."
+      "three_week_return": -0.32804,
+      "signal": "RED",
+      "note": "Price trend only; flow and fund trade confirmation separate."
     },
     {
       "ticker": "NVDA",
       "role": "AI accelerators",
-      "last_close": null,
+      "last_close": 125.53,
       "four_closes": [
-        null,
-        null,
-        null,
-        null
+        204.64,
+        186.64,
+        162.85,
+        125.53
       ],
-      "three_week_return": null,
-      "signal": "UNKNOWN",
-      "note": "Run scheduled update to fetch prices; no synthetic values."
+      "three_week_return": -0.38658,
+      "signal": "RED",
+      "note": "Price trend only; flow and fund trade confirmation separate."
     },
     {
       "ticker": "TSM",
       "role": "Foundry",
-      "last_close": null,
+      "last_close": 318.71,
       "four_closes": [
-        null,
-        null,
-        null,
-        null
+        406.13,
+        375.44,
+        398.73,
+        318.71
       ],
-      "three_week_return": null,
-      "signal": "UNKNOWN",
-      "note": "Run scheduled update to fetch prices; no synthetic values."
+      "three_week_return": -0.21525,
+      "signal": "RED",
+      "note": "Price trend only; flow and fund trade confirmation separate."
     },
     {
       "ticker": "ASML",
       "role": "Lithography",
-      "last_close": null,
+      "last_close": 1266.22,
       "four_closes": [
-        null,
-        null,
-        null,
-        null
+        1565.9,
+        1424.75,
+        1495.16,
+        1266.22
       ],
-      "three_week_return": null,
-      "signal": "UNKNOWN",
-      "note": "Run scheduled update to fetch prices; no synthetic values."
+      "three_week_return": -0.19138,
+      "signal": "RED",
+      "note": "Price trend only; flow and fund trade confirmation separate."
     },
     {
       "ticker": "AMAT",
       "role": "Equipment",
-      "last_close": null,
+      "last_close": 302.63,
       "four_closes": [
-        null,
-        null,
-        null,
-        null
+        390.09,
+        332.72,
+        370.5,
+        302.63
       ],
-      "three_week_return": null,
-      "signal": "UNKNOWN",
-      "note": "Run scheduled update to fetch prices; no synthetic values."
+      "three_week_return": -0.2242,
+      "signal": "RED",
+      "note": "Price trend only; flow and fund trade confirmation separate."
     },
     {
       "ticker": "LRCX",
       "role": "Equipment",
-      "last_close": null,
+      "last_close": 183.27,
       "four_closes": [
-        null,
-        null,
-        null,
-        null
+        239.11,
+        200.44,
+        225.92,
+        183.27
       ],
-      "three_week_return": null,
-      "signal": "UNKNOWN",
-      "note": "Run scheduled update to fetch prices; no synthetic values."
+      "three_week_return": -0.23353,
+      "signal": "RED",
+      "note": "Price trend only; flow and fund trade confirmation separate."
     }
   ],
   "flows": [],
@@ -186,5 +186,6 @@
       "source": "https://www.sec.gov/Archives/edgar/data/1656456/000165645626000004/xslForm13F_X02/Form13FInfoTable.xml",
       "verified": true
     }
-  ]
+  ],
+  "data_note": "Price feed Yahoo Finance (yfinance); do not assume exchange-verified or intraday completion."
 }
