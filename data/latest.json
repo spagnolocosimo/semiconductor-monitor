@@ -1,0 +1,190 @@
+{
+  "generated_at_amsterdam": "Not run yet",
+  "price_as_of": "Not fetched yet",
+  "signal": "UNKNOWN",
+  "headline": "Run the first update to populate market data",
+  "reason": "Quarterly SEC filings preloaded. No unsourced ETF flows or fund trades.",
+  "gates": [
+    {
+      "name": "ETF price stabilization",
+      "status": "UNKNOWN",
+      "detail": "Awaiting prices"
+    },
+    {
+      "name": "Verified ETF flows",
+      "status": "YELLOW",
+      "detail": "No sourced full-week data"
+    },
+    {
+      "name": "Dated institutional net buying",
+      "status": "YELLOW",
+      "detail": "No sourced current events"
+    }
+  ],
+  "assets": [
+    {
+      "ticker": "SMH",
+      "role": "Market ETF",
+      "last_close": null,
+      "four_closes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "three_week_return": null,
+      "signal": "UNKNOWN",
+      "note": "Run scheduled update to fetch prices; no synthetic values."
+    },
+    {
+      "ticker": "SOXX",
+      "role": "Market ETF",
+      "last_close": null,
+      "four_closes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "three_week_return": null,
+      "signal": "UNKNOWN",
+      "note": "Run scheduled update to fetch prices; no synthetic values."
+    },
+    {
+      "ticker": "MU",
+      "role": "HBM / memory",
+      "last_close": null,
+      "four_closes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "three_week_return": null,
+      "signal": "UNKNOWN",
+      "note": "Run scheduled update to fetch prices; no synthetic values."
+    },
+    {
+      "ticker": "NVDA",
+      "role": "AI accelerators",
+      "last_close": null,
+      "four_closes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "three_week_return": null,
+      "signal": "UNKNOWN",
+      "note": "Run scheduled update to fetch prices; no synthetic values."
+    },
+    {
+      "ticker": "TSM",
+      "role": "Foundry",
+      "last_close": null,
+      "four_closes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "three_week_return": null,
+      "signal": "UNKNOWN",
+      "note": "Run scheduled update to fetch prices; no synthetic values."
+    },
+    {
+      "ticker": "ASML",
+      "role": "Lithography",
+      "last_close": null,
+      "four_closes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "three_week_return": null,
+      "signal": "UNKNOWN",
+      "note": "Run scheduled update to fetch prices; no synthetic values."
+    },
+    {
+      "ticker": "AMAT",
+      "role": "Equipment",
+      "last_close": null,
+      "four_closes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "three_week_return": null,
+      "signal": "UNKNOWN",
+      "note": "Run scheduled update to fetch prices; no synthetic values."
+    },
+    {
+      "ticker": "LRCX",
+      "role": "Equipment",
+      "last_close": null,
+      "four_closes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "three_week_return": null,
+      "signal": "UNKNOWN",
+      "note": "Run scheduled update to fetch prices; no synthetic values."
+    }
+  ],
+  "flows": [],
+  "trades": [],
+  "filings": [
+    {
+      "manager": "Appaloosa",
+      "ticker": "MU",
+      "q2": 975000,
+      "q3": 1250000,
+      "source": "https://www.sec.gov/Archives/edgar/data/1656456/000165645626000004/xslForm13F_X02/Form13FInfoTable.xml",
+      "verified": true
+    },
+    {
+      "manager": "Appaloosa",
+      "ticker": "NVDA",
+      "q2": 1525000,
+      "q3": 2000000,
+      "source": "https://www.sec.gov/Archives/edgar/data/1656456/000165645626000004/xslForm13F_X02/Form13FInfoTable.xml",
+      "verified": true
+    },
+    {
+      "manager": "Appaloosa",
+      "ticker": "TSM",
+      "q2": 1650000,
+      "q3": 1575000,
+      "source": "https://www.sec.gov/Archives/edgar/data/1656456/000165645626000004/xslForm13F_X02/Form13FInfoTable.xml",
+      "verified": true
+    },
+    {
+      "manager": "Appaloosa",
+      "ticker": "ASML",
+      "q2": 50000,
+      "q3": 65000,
+      "source": "https://www.sec.gov/Archives/edgar/data/1656456/000165645626000004/xslForm13F_X02/Form13FInfoTable.xml",
+      "verified": true
+    },
+    {
+      "manager": "Appaloosa",
+      "ticker": "AMAT",
+      "q2": 0,
+      "q3": 225000,
+      "source": "https://www.sec.gov/Archives/edgar/data/1656456/000165645626000004/xslForm13F_X02/Form13FInfoTable.xml",
+      "verified": true
+    },
+    {
+      "manager": "Appaloosa",
+      "ticker": "LRCX",
+      "q2": 382500,
+      "q3": 625000,
+      "source": "https://www.sec.gov/Archives/edgar/data/1656456/000165645626000004/xslForm13F_X02/Form13FInfoTable.xml",
+      "verified": true
+    }
+  ]
+}
