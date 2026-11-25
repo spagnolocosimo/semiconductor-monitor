@@ -16,6 +16,8 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install -r requirements.txt
+      - name: Import ETF.com daily flows
+        run: python refresh_evidence.py
       - name: Refresh prices and SEC 13F
         env:
           SCHEDULE_EVENT: ${{ github.event_name }}
