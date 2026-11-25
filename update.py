@@ -10,8 +10,21 @@ CUSIPS={'MU':'595112103','NVDA':'67066G104','TSM':'874039100','ASML':'N07059210'
 now=datetime.now(ZoneInfo('Europe/Amsterdam'))
 if os.environ.get('SCHEDULE_EVENT')=='schedule' and (now.weekday()>4 or now.hour!=22):raise SystemExit('Wrong Amsterdam slot')
 def get(url):
- req=Request(url,headers={'User-Agent':'Cosimo Spagnolo semiconductor research contact: github.com/spagnolocosimo','Accept-Encoding':'identity'})
- with urlopen(req,timeout=16) as r:return r.read()
+    email = os.environ.get("SEC_CONTACT_EMAIL")
+
+    if not email:
+        raise RuntimeError("SEC_CONTACT_EMAIL is not configured")
+
+    req = Request(
+        url,
+        headers={
+            "User-Agent": f"Cosimo Spagnolo SemiconductorMonitor {email}",
+            "Accept-Encoding": "identity"
+        }
+    )
+
+    with urlopen(req, timeout=16) as r:
+        return r.read()
 def readjson(path,default):
  try:return json.loads(path.read_text())
  except Exception:return default
