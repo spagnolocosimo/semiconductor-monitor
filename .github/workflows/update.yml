@@ -19,6 +19,7 @@ jobs:
       - name: Refresh prices and SEC 13F
         env:
           SCHEDULE_EVENT: ${{ github.event_name }}
+          SEC_CONTACT_EMAIL: ${{ secrets.SEC_CONTACT_EMAIL }}
         run: python update.py
       - name: Commit new observations
         run: |
