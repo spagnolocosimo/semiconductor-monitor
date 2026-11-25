@@ -1,20 +1,6 @@
 {
   "flows": [
     {
-      "date": "2026-11-09",
-      "ticker": "SOXX",
-      "usd_m": -4131.02,
-      "source": "https://www.etf.com/sections/daily-etf-flows/etf-fund-flows-nov-10-2026-spy-soxx-shed-83b-qqq-adds-24b",
-      "quality": "ETF.com reported daily net creations/redemptions; article date Nov 10, trade date inferred as previous session"
-    },
-    {
-      "date": "2026-11-09",
-      "ticker": "SMH",
-      "usd_m": -1044.04,
-      "source": "https://www.etf.com/sections/daily-etf-flows/etf-fund-flows-nov-10-2026-spy-soxx-shed-83b-qqq-adds-24b",
-      "quality": "ETF.com reported daily net creations/redemptions; article date Nov 10, trade date inferred as previous session"
-    },
-    {
       "date": "2026-11-10",
       "ticker": "SOXX",
       "usd_m": 3976.38,
@@ -27,6 +13,20 @@
       "usd_m": 1291.16,
       "source": "https://www.etf.com/sections/daily-etf-flows/daily-etf-flows-4b-flows-soxx",
       "quality": "ETF.com explicitly states flows for November 10"
+    },
+    {
+      "date": "2026-11-09",
+      "ticker": "SOXX",
+      "usd_m": -4131.02,
+      "source": "https://www.etf.com/sections/daily-etf-flows/etf-fund-flows-nov-10-2026-spy-soxx-shed-83b-qqq-adds-24b",
+      "quality": "ETF.com reported daily net creations/redemptions; article date Nov 10, trade date inferred as previous session"
+    },
+    {
+      "date": "2026-11-09",
+      "ticker": "SMH",
+      "usd_m": -1044.04,
+      "source": "https://www.etf.com/sections/daily-etf-flows/etf-fund-flows-nov-10-2026-spy-soxx-shed-83b-qqq-adds-24b",
+      "quality": "ETF.com reported daily net creations/redemptions; article date Nov 10, trade date inferred as previous session"
     }
   ],
   "trades": [
