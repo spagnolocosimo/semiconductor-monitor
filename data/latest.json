@@ -1,5 +1,5 @@
 {
-  "generated_at_amsterdam": "2026-11-25 10:28 CET",
+  "generated_at_amsterdam": "2026-11-25 13:21 CET",
   "price_as_of": "2026-11-24",
   "price_fresh": true,
   "signal": "RED",
@@ -335,77 +335,534 @@
   ],
   "filings": [
     {
+      "manager": "ARK Investment Management",
+      "ticker": "NVDA",
+      "q2": 1381247,
+      "q3": 2561223,
+      "source": "https://www.sec.gov/Archives/edgar/data/1697748/000110465926126785/infotable.xml",
+      "q2_source": "https://www.sec.gov/Archives/edgar/data/1697748/000110465926096910/infotable.xml",
+      "period": "2026-09-30",
+      "quality": "SEC XML Q2 and Q3 parsed; common shares only"
+    },
+    {
+      "manager": "ARK Investment Management",
+      "ticker": "TSM",
+      "q2": 482286,
+      "q3": 532668,
+      "source": "https://www.sec.gov/Archives/edgar/data/1697748/000110465926126785/infotable.xml",
+      "q2_source": "https://www.sec.gov/Archives/edgar/data/1697748/000110465926096910/infotable.xml",
+      "period": "2026-09-30",
+      "quality": "SEC XML Q2 and Q3 parsed; common shares only"
+    },
+    {
       "manager": "Appaloosa",
       "ticker": "AMAT",
       "q2": 0,
       "q3": 225000,
-      "source": "https://www.sec.gov/Archives/edgar/data/1656456/000165645626000004/xslForm13F_X02/Form13FInfoTable.xml",
+      "source": "https://www.sec.gov/Archives/edgar/data/1656456/000165645626000004/Form13FInfoTable.xml",
+      "q2_source": "https://www.sec.gov/Archives/edgar/data/1656456/000165645626000003/Form13FInfoTable.xml",
       "period": "2026-09-30",
-      "quality": "SEC information table Q2/Q3 checked"
+      "quality": "SEC XML Q2 and Q3 parsed; common shares only"
     },
     {
       "manager": "Appaloosa",
       "ticker": "ASML",
       "q2": 50000,
       "q3": 65000,
-      "source": "https://www.sec.gov/Archives/edgar/data/1656456/000165645626000004/xslForm13F_X02/Form13FInfoTable.xml",
+      "source": "https://www.sec.gov/Archives/edgar/data/1656456/000165645626000004/Form13FInfoTable.xml",
+      "q2_source": "https://www.sec.gov/Archives/edgar/data/1656456/000165645626000003/Form13FInfoTable.xml",
       "period": "2026-09-30",
-      "quality": "SEC information table Q2/Q3 checked"
+      "quality": "SEC XML Q2 and Q3 parsed; common shares only"
     },
     {
       "manager": "Appaloosa",
       "ticker": "LRCX",
       "q2": 382500,
       "q3": 625000,
-      "source": "https://www.sec.gov/Archives/edgar/data/1656456/000165645626000004/xslForm13F_X02/Form13FInfoTable.xml",
+      "source": "https://www.sec.gov/Archives/edgar/data/1656456/000165645626000004/Form13FInfoTable.xml",
+      "q2_source": "https://www.sec.gov/Archives/edgar/data/1656456/000165645626000003/Form13FInfoTable.xml",
       "period": "2026-09-30",
-      "quality": "SEC information table Q2/Q3 checked"
+      "quality": "SEC XML Q2 and Q3 parsed; common shares only"
     },
     {
       "manager": "Appaloosa",
       "ticker": "MU",
       "q2": 975000,
       "q3": 1250000,
-      "source": "https://www.sec.gov/Archives/edgar/data/1656456/000165645626000004/xslForm13F_X02/Form13FInfoTable.xml",
+      "source": "https://www.sec.gov/Archives/edgar/data/1656456/000165645626000004/Form13FInfoTable.xml",
+      "q2_source": "https://www.sec.gov/Archives/edgar/data/1656456/000165645626000003/Form13FInfoTable.xml",
       "period": "2026-09-30",
-      "quality": "SEC information table Q2/Q3 checked"
+      "quality": "SEC XML Q2 and Q3 parsed; common shares only"
     },
     {
       "manager": "Appaloosa",
       "ticker": "NVDA",
       "q2": 1525000,
       "q3": 2000000,
-      "source": "https://www.sec.gov/Archives/edgar/data/1656456/000165645626000004/xslForm13F_X02/Form13FInfoTable.xml",
+      "source": "https://www.sec.gov/Archives/edgar/data/1656456/000165645626000004/Form13FInfoTable.xml",
+      "q2_source": "https://www.sec.gov/Archives/edgar/data/1656456/000165645626000003/Form13FInfoTable.xml",
       "period": "2026-09-30",
-      "quality": "SEC information table Q2/Q3 checked"
+      "quality": "SEC XML Q2 and Q3 parsed; common shares only"
     },
     {
       "manager": "Appaloosa",
       "ticker": "TSM",
       "q2": 1650000,
       "q3": 1575000,
-      "source": "https://www.sec.gov/Archives/edgar/data/1656456/000165645626000004/xslForm13F_X02/Form13FInfoTable.xml",
+      "source": "https://www.sec.gov/Archives/edgar/data/1656456/000165645626000004/Form13FInfoTable.xml",
+      "q2_source": "https://www.sec.gov/Archives/edgar/data/1656456/000165645626000003/Form13FInfoTable.xml",
       "period": "2026-09-30",
-      "quality": "SEC information table Q2/Q3 checked"
+      "quality": "SEC XML Q2 and Q3 parsed; common shares only"
+    },
+    {
+      "manager": "Bridgewater Associates",
+      "ticker": "AMAT",
+      "q2": 291426,
+      "q3": 563379,
+      "source": "https://www.sec.gov/Archives/edgar/data/1350694/000135069426000004/infotable.xml",
+      "q2_source": "https://www.sec.gov/Archives/edgar/data/1350694/000135069426000003/infotable.xml",
+      "period": "2026-09-30",
+      "quality": "SEC XML Q2 and Q3 parsed; common shares only"
+    },
+    {
+      "manager": "Bridgewater Associates",
+      "ticker": "ASML",
+      "q2": 61675,
+      "q3": 42229,
+      "source": "https://www.sec.gov/Archives/edgar/data/1350694/000135069426000004/infotable.xml",
+      "q2_source": "https://www.sec.gov/Archives/edgar/data/1350694/000135069426000003/infotable.xml",
+      "period": "2026-09-30",
+      "quality": "SEC XML Q2 and Q3 parsed; common shares only"
+    },
+    {
+      "manager": "Bridgewater Associates",
+      "ticker": "LRCX",
+      "q2": 938224,
+      "q3": 1059885,
+      "source": "https://www.sec.gov/Archives/edgar/data/1350694/000135069426000004/infotable.xml",
+      "q2_source": "https://www.sec.gov/Archives/edgar/data/1350694/000135069426000003/infotable.xml",
+      "period": "2026-09-30",
+      "quality": "SEC XML Q2 and Q3 parsed; common shares only"
+    },
+    {
+      "manager": "Bridgewater Associates",
+      "ticker": "MU",
+      "q2": 116666,
+      "q3": 237119,
+      "source": "https://www.sec.gov/Archives/edgar/data/1350694/000135069426000004/infotable.xml",
+      "q2_source": "https://www.sec.gov/Archives/edgar/data/1350694/000135069426000003/infotable.xml",
+      "period": "2026-09-30",
+      "quality": "SEC XML Q2 and Q3 parsed; common shares only"
+    },
+    {
+      "manager": "Bridgewater Associates",
+      "ticker": "NVDA",
+      "q2": 3866195,
+      "q3": 2688221,
+      "source": "https://www.sec.gov/Archives/edgar/data/1350694/000135069426000004/infotable.xml",
+      "q2_source": "https://www.sec.gov/Archives/edgar/data/1350694/000135069426000003/infotable.xml",
+      "period": "2026-09-30",
+      "quality": "SEC XML Q2 and Q3 parsed; common shares only"
+    },
+    {
+      "manager": "Bridgewater Associates",
+      "ticker": "TSM",
+      "q2": 34525,
+      "q3": 78386,
+      "source": "https://www.sec.gov/Archives/edgar/data/1350694/000135069426000004/infotable.xml",
+      "q2_source": "https://www.sec.gov/Archives/edgar/data/1350694/000135069426000003/infotable.xml",
+      "period": "2026-09-30",
+      "quality": "SEC XML Q2 and Q3 parsed; common shares only"
+    },
+    {
+      "manager": "Citadel Advisors",
+      "ticker": "AMAT",
+      "q2": 1080951,
+      "q3": 657053,
+      "source": "https://www.sec.gov/Archives/edgar/data/1423053/000110465926128228/infotable.xml",
+      "q2_source": "https://www.sec.gov/Archives/edgar/data/1423053/000110465926104387/infotable.xml",
+      "period": "2026-09-30",
+      "quality": "SEC XML Q2 and Q3 parsed; common shares only"
+    },
+    {
+      "manager": "Citadel Advisors",
+      "ticker": "ASML",
+      "q2": 188358,
+      "q3": 63375,
+      "source": "https://www.sec.gov/Archives/edgar/data/1423053/000110465926128228/infotable.xml",
+      "q2_source": "https://www.sec.gov/Archives/edgar/data/1423053/000110465926104387/infotable.xml",
+      "period": "2026-09-30",
+      "quality": "SEC XML Q2 and Q3 parsed; common shares only"
+    },
+    {
+      "manager": "Citadel Advisors",
+      "ticker": "LRCX",
+      "q2": 1420975,
+      "q3": 1074705,
+      "source": "https://www.sec.gov/Archives/edgar/data/1423053/000110465926128228/infotable.xml",
+      "q2_source": "https://www.sec.gov/Archives/edgar/data/1423053/000110465926104387/infotable.xml",
+      "period": "2026-09-30",
+      "quality": "SEC XML Q2 and Q3 parsed; common shares only"
+    },
+    {
+      "manager": "Citadel Advisors",
+      "ticker": "MU",
+      "q2": 600523,
+      "q3": 735473,
+      "source": "https://www.sec.gov/Archives/edgar/data/1423053/000110465926128228/infotable.xml",
+      "q2_source": "https://www.sec.gov/Archives/edgar/data/1423053/000110465926104387/infotable.xml",
+      "period": "2026-09-30",
+      "quality": "SEC XML Q2 and Q3 parsed; common shares only"
+    },
+    {
+      "manager": "Citadel Advisors",
+      "ticker": "NVDA",
+      "q2": 11815467,
+      "q3": 11660790,
+      "source": "https://www.sec.gov/Archives/edgar/data/1423053/000110465926128228/infotable.xml",
+      "q2_source": "https://www.sec.gov/Archives/edgar/data/1423053/000110465926104387/infotable.xml",
+      "period": "2026-09-30",
+      "quality": "SEC XML Q2 and Q3 parsed; common shares only"
+    },
+    {
+      "manager": "Citadel Advisors",
+      "ticker": "TSM",
+      "q2": 525939,
+      "q3": 976736,
+      "source": "https://www.sec.gov/Archives/edgar/data/1423053/000110465926128228/infotable.xml",
+      "q2_source": "https://www.sec.gov/Archives/edgar/data/1423053/000110465926104387/infotable.xml",
+      "period": "2026-09-30",
+      "quality": "SEC XML Q2 and Q3 parsed; common shares only"
+    },
+    {
+      "manager": "Duquesne Family Office",
+      "ticker": "LRCX",
+      "q2": 43600,
+      "q3": 0,
+      "source": "https://www.sec.gov/Archives/edgar/data/1536411/000153641126000011/form13f_20260930.xml",
+      "q2_source": "https://www.sec.gov/Archives/edgar/data/1536411/000153641126000006/form13f_20260630.xml",
+      "period": "2026-09-30",
+      "quality": "SEC XML Q2 and Q3 parsed; common shares only"
+    },
+    {
+      "manager": "Duquesne Family Office",
+      "ticker": "TSM",
+      "q2": 589680,
+      "q3": 32700,
+      "source": "https://www.sec.gov/Archives/edgar/data/1536411/000153641126000011/form13f_20260930.xml",
+      "q2_source": "https://www.sec.gov/Archives/edgar/data/1536411/000153641126000006/form13f_20260630.xml",
+      "period": "2026-09-30",
+      "quality": "SEC XML Q2 and Q3 parsed; common shares only"
+    },
+    {
+      "manager": "Millennium Management",
+      "ticker": "AMAT",
+      "q2": 319450,
+      "q3": 724620,
+      "source": "https://www.sec.gov/Archives/edgar/data/1273087/000127308726000011/MLP_Filing_20260930.xml",
+      "q2_source": "https://www.sec.gov/Archives/edgar/data/1273087/000127308726000007/MLP_Filing_20260630.xml",
+      "period": "2026-09-30",
+      "quality": "SEC XML Q2 and Q3 parsed; common shares only"
+    },
+    {
+      "manager": "Millennium Management",
+      "ticker": "ASML",
+      "q2": 74461,
+      "q3": 83122,
+      "source": "https://www.sec.gov/Archives/edgar/data/1273087/000127308726000011/MLP_Filing_20260930.xml",
+      "q2_source": "https://www.sec.gov/Archives/edgar/data/1273087/000127308726000007/MLP_Filing_20260630.xml",
+      "period": "2026-09-30",
+      "quality": "SEC XML Q2 and Q3 parsed; common shares only"
+    },
+    {
+      "manager": "Millennium Management",
+      "ticker": "LRCX",
+      "q2": 696499,
+      "q3": 277144,
+      "source": "https://www.sec.gov/Archives/edgar/data/1273087/000127308726000011/MLP_Filing_20260930.xml",
+      "q2_source": "https://www.sec.gov/Archives/edgar/data/1273087/000127308726000007/MLP_Filing_20260630.xml",
+      "period": "2026-09-30",
+      "quality": "SEC XML Q2 and Q3 parsed; common shares only"
+    },
+    {
+      "manager": "Millennium Management",
+      "ticker": "MU",
+      "q2": 517125,
+      "q3": 1231444,
+      "source": "https://www.sec.gov/Archives/edgar/data/1273087/000127308726000011/MLP_Filing_20260930.xml",
+      "q2_source": "https://www.sec.gov/Archives/edgar/data/1273087/000127308726000007/MLP_Filing_20260630.xml",
+      "period": "2026-09-30",
+      "quality": "SEC XML Q2 and Q3 parsed; common shares only"
+    },
+    {
+      "manager": "Millennium Management",
+      "ticker": "NVDA",
+      "q2": 12157614,
+      "q3": 13041779,
+      "source": "https://www.sec.gov/Archives/edgar/data/1273087/000127308726000011/MLP_Filing_20260930.xml",
+      "q2_source": "https://www.sec.gov/Archives/edgar/data/1273087/000127308726000007/MLP_Filing_20260630.xml",
+      "period": "2026-09-30",
+      "quality": "SEC XML Q2 and Q3 parsed; common shares only"
+    },
+    {
+      "manager": "Millennium Management",
+      "ticker": "TSM",
+      "q2": 1592445,
+      "q3": 1281469,
+      "source": "https://www.sec.gov/Archives/edgar/data/1273087/000127308726000011/MLP_Filing_20260930.xml",
+      "q2_source": "https://www.sec.gov/Archives/edgar/data/1273087/000127308726000007/MLP_Filing_20260630.xml",
+      "period": "2026-09-30",
+      "quality": "SEC XML Q2 and Q3 parsed; common shares only"
+    },
+    {
+      "manager": "Point72 Asset Management",
+      "ticker": "AMAT",
+      "q2": 599984,
+      "q3": 561651,
+      "source": "https://www.sec.gov/Archives/edgar/data/1603466/000091957426008126/infotable.xml",
+      "q2_source": "https://www.sec.gov/Archives/edgar/data/1603466/000091957426005520/infotable.xml",
+      "period": "2026-09-30",
+      "quality": "SEC XML Q2 and Q3 parsed; common shares only"
+    },
+    {
+      "manager": "Point72 Asset Management",
+      "ticker": "ASML",
+      "q2": 554661,
+      "q3": 252412,
+      "source": "https://www.sec.gov/Archives/edgar/data/1603466/000091957426008126/infotable.xml",
+      "q2_source": "https://www.sec.gov/Archives/edgar/data/1603466/000091957426005520/infotable.xml",
+      "period": "2026-09-30",
+      "quality": "SEC XML Q2 and Q3 parsed; common shares only"
+    },
+    {
+      "manager": "Point72 Asset Management",
+      "ticker": "MU",
+      "q2": 311683,
+      "q3": 141349,
+      "source": "https://www.sec.gov/Archives/edgar/data/1603466/000091957426008126/infotable.xml",
+      "q2_source": "https://www.sec.gov/Archives/edgar/data/1603466/000091957426005520/infotable.xml",
+      "period": "2026-09-30",
+      "quality": "SEC XML Q2 and Q3 parsed; common shares only"
+    },
+    {
+      "manager": "Point72 Asset Management",
+      "ticker": "NVDA",
+      "q2": 437800,
+      "q3": 1755794,
+      "source": "https://www.sec.gov/Archives/edgar/data/1603466/000091957426008126/infotable.xml",
+      "q2_source": "https://www.sec.gov/Archives/edgar/data/1603466/000091957426005520/infotable.xml",
+      "period": "2026-09-30",
+      "quality": "SEC XML Q2 and Q3 parsed; common shares only"
+    },
+    {
+      "manager": "Point72 Asset Management",
+      "ticker": "TSM",
+      "q2": 1603897,
+      "q3": 555456,
+      "source": "https://www.sec.gov/Archives/edgar/data/1603466/000091957426008126/infotable.xml",
+      "q2_source": "https://www.sec.gov/Archives/edgar/data/1603466/000091957426005520/infotable.xml",
+      "period": "2026-09-30",
+      "quality": "SEC XML Q2 and Q3 parsed; common shares only"
+    },
+    {
+      "manager": "Renaissance Technologies",
+      "ticker": "ASML",
+      "q2": 203,
+      "q3": 382,
+      "source": "https://www.sec.gov/Archives/edgar/data/1037389/000103738926000062/renaissance13Fq32026_holding.xml",
+      "q2_source": "https://www.sec.gov/Archives/edgar/data/1037389/000103738926000059/renaissance13Fq22026_holding.xml",
+      "period": "2026-09-30",
+      "quality": "SEC XML Q2 and Q3 parsed; common shares only"
+    },
+    {
+      "manager": "Renaissance Technologies",
+      "ticker": "LRCX",
+      "q2": 31600,
+      "q3": 475661,
+      "source": "https://www.sec.gov/Archives/edgar/data/1037389/000103738926000062/renaissance13Fq32026_holding.xml",
+      "q2_source": "https://www.sec.gov/Archives/edgar/data/1037389/000103738926000059/renaissance13Fq22026_holding.xml",
+      "period": "2026-09-30",
+      "quality": "SEC XML Q2 and Q3 parsed; common shares only"
+    },
+    {
+      "manager": "Renaissance Technologies",
+      "ticker": "MU",
+      "q2": 211580,
+      "q3": 1520639,
+      "source": "https://www.sec.gov/Archives/edgar/data/1037389/000103738926000062/renaissance13Fq32026_holding.xml",
+      "q2_source": "https://www.sec.gov/Archives/edgar/data/1037389/000103738926000059/renaissance13Fq22026_holding.xml",
+      "period": "2026-09-30",
+      "quality": "SEC XML Q2 and Q3 parsed; common shares only"
+    },
+    {
+      "manager": "Renaissance Technologies",
+      "ticker": "NVDA",
+      "q2": 7091256,
+      "q3": 23170,
+      "source": "https://www.sec.gov/Archives/edgar/data/1037389/000103738926000062/renaissance13Fq32026_holding.xml",
+      "q2_source": "https://www.sec.gov/Archives/edgar/data/1037389/000103738926000059/renaissance13Fq22026_holding.xml",
+      "period": "2026-09-30",
+      "quality": "SEC XML Q2 and Q3 parsed; common shares only"
+    },
+    {
+      "manager": "Renaissance Technologies",
+      "ticker": "TSM",
+      "q2": 849080,
+      "q3": 126320,
+      "source": "https://www.sec.gov/Archives/edgar/data/1037389/000103738926000062/renaissance13Fq32026_holding.xml",
+      "q2_source": "https://www.sec.gov/Archives/edgar/data/1037389/000103738926000059/renaissance13Fq22026_holding.xml",
+      "period": "2026-09-30",
+      "quality": "SEC XML Q2 and Q3 parsed; common shares only"
+    },
+    {
+      "manager": "Soros Fund Management",
+      "ticker": "MU",
+      "q2": 22422,
+      "q3": 35618,
+      "source": "https://www.sec.gov/Archives/edgar/data/1029160/000090266426004530/infotable.xml",
+      "q2_source": "https://www.sec.gov/Archives/edgar/data/1029160/000090266426003507/infotable.xml",
+      "period": "2026-09-30",
+      "quality": "SEC XML Q2 and Q3 parsed; common shares only"
+    },
+    {
+      "manager": "Soros Fund Management",
+      "ticker": "NVDA",
+      "q2": 1064635,
+      "q3": 858822,
+      "source": "https://www.sec.gov/Archives/edgar/data/1029160/000090266426004530/infotable.xml",
+      "q2_source": "https://www.sec.gov/Archives/edgar/data/1029160/000090266426003507/infotable.xml",
+      "period": "2026-09-30",
+      "quality": "SEC XML Q2 and Q3 parsed; common shares only"
+    },
+    {
+      "manager": "Soros Fund Management",
+      "ticker": "TSM",
+      "q2": 522158,
+      "q3": 548915,
+      "source": "https://www.sec.gov/Archives/edgar/data/1029160/000090266426004530/infotable.xml",
+      "q2_source": "https://www.sec.gov/Archives/edgar/data/1029160/000090266426003507/infotable.xml",
+      "period": "2026-09-30",
+      "quality": "SEC XML Q2 and Q3 parsed; common shares only"
+    },
+    {
+      "manager": "State Street",
+      "ticker": "AMAT",
+      "q2": 38240019,
+      "q3": 38212599,
+      "source": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000747/XML_Infotable.xml",
+      "q2_source": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000583/XML_Infotable.xml",
+      "period": "2026-09-30",
+      "quality": "SEC XML Q2 and Q3 parsed; common shares only"
+    },
+    {
+      "manager": "State Street",
+      "ticker": "ASML",
+      "q2": 85872,
+      "q3": 83682,
+      "source": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000747/XML_Infotable.xml",
+      "q2_source": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000583/XML_Infotable.xml",
+      "period": "2026-09-30",
+      "quality": "SEC XML Q2 and Q3 parsed; common shares only"
+    },
+    {
+      "manager": "State Street",
+      "ticker": "LRCX",
+      "q2": 60704130,
+      "q3": 60295789,
+      "source": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000747/XML_Infotable.xml",
+      "q2_source": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000583/XML_Infotable.xml",
+      "period": "2026-09-30",
+      "quality": "SEC XML Q2 and Q3 parsed; common shares only"
+    },
+    {
+      "manager": "State Street",
+      "ticker": "MU",
+      "q2": 50075870,
+      "q3": 51123227,
+      "source": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000747/XML_Infotable.xml",
+      "q2_source": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000583/XML_Infotable.xml",
+      "period": "2026-09-30",
+      "quality": "SEC XML Q2 and Q3 parsed; common shares only"
+    },
+    {
+      "manager": "State Street",
+      "ticker": "NVDA",
+      "q2": 1009783437,
+      "q3": 1025075347,
+      "source": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000747/XML_Infotable.xml",
+      "q2_source": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000583/XML_Infotable.xml",
+      "period": "2026-09-30",
+      "quality": "SEC XML Q2 and Q3 parsed; common shares only"
+    },
+    {
+      "manager": "State Street",
+      "ticker": "TSM",
+      "q2": 922710,
+      "q3": 670480,
+      "source": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000747/XML_Infotable.xml",
+      "q2_source": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000583/XML_Infotable.xml",
+      "period": "2026-09-30",
+      "quality": "SEC XML Q2 and Q3 parsed; common shares only"
+    },
+    {
+      "manager": "Tiger Global",
+      "ticker": "AMAT",
+      "q2": 1632210,
+      "q3": 1201364,
+      "source": "https://www.sec.gov/Archives/edgar/data/1167483/000091957426008062/infotable.xml",
+      "q2_source": "https://www.sec.gov/Archives/edgar/data/1167483/000091957426005427/infotable.xml",
+      "period": "2026-09-30",
+      "quality": "SEC XML Q2 and Q3 parsed; common shares only"
+    },
+    {
+      "manager": "Tiger Global",
+      "ticker": "LRCX",
+      "q2": 3163495,
+      "q3": 2193339,
+      "source": "https://www.sec.gov/Archives/edgar/data/1167483/000091957426008062/infotable.xml",
+      "q2_source": "https://www.sec.gov/Archives/edgar/data/1167483/000091957426005427/infotable.xml",
+      "period": "2026-09-30",
+      "quality": "SEC XML Q2 and Q3 parsed; common shares only"
+    },
+    {
+      "manager": "Tiger Global",
+      "ticker": "NVDA",
+      "q2": 11198773,
+      "q3": 12000000,
+      "source": "https://www.sec.gov/Archives/edgar/data/1167483/000091957426008062/infotable.xml",
+      "q2_source": "https://www.sec.gov/Archives/edgar/data/1167483/000091957426005427/infotable.xml",
+      "period": "2026-09-30",
+      "quality": "SEC XML Q2 and Q3 parsed; common shares only"
+    },
+    {
+      "manager": "Tiger Global",
+      "ticker": "TSM",
+      "q2": 4881008,
+      "q3": 3133924,
+      "source": "https://www.sec.gov/Archives/edgar/data/1167483/000091957426008062/infotable.xml",
+      "q2_source": "https://www.sec.gov/Archives/edgar/data/1167483/000091957426005427/infotable.xml",
+      "period": "2026-09-30",
+      "quality": "SEC XML Q2 and Q3 parsed; common shares only"
     }
   ],
-  "sec_managers_updated": [],
+  "sec_managers_updated": [
+    "Appaloosa",
+    "Bridgewater Associates",
+    "Tiger Global",
+    "Duquesne Family Office",
+    "Berkshire Hathaway",
+    "Citadel Advisors",
+    "Renaissance Technologies",
+    "Millennium Management",
+    "Coatue Management",
+    "Point72 Asset Management",
+    "Soros Fund Management",
+    "ARK Investment Management",
+    "State Street"
+  ],
   "sec_errors": [
-    "Appaloosa: HTTP Error 403: Forbidden",
-    "Bridgewater Associates: HTTP Error 403: Forbidden",
-    "Tiger Global: HTTP Error 403: Forbidden",
-    "Duquesne Family Office: HTTP Error 403: Forbidden",
-    "Berkshire Hathaway: HTTP Error 403: Forbidden",
-    "Citadel Advisors: HTTP Error 403: Forbidden",
-    "Renaissance Technologies: HTTP Error 403: Forbidden",
-    "Millennium Management: HTTP Error 403: Forbidden",
-    "Coatue Management: HTTP Error 403: Forbidden",
-    "Point72 Asset Management: HTTP Error 403: Forbidden",
-    "Soros Fund Management: HTTP Error 403: Forbidden",
-    "ARK Investment Management: HTTP Error 403: Forbidden",
-    "BlackRock: HTTP Error 403: Forbidden",
-    "Vanguard Group: HTTP Error 403: Forbidden",
-    "State Street: HTTP Error 403: Forbidden"
+    "BlackRock: One or both information tables missing",
+    "Vanguard Group: One or both information tables missing"
   ],
   "source_note": "Market prices Yahoo Finance; flows ETF.com; dated ARK events third-party; SEC holdings directly parsed when available."
 }
