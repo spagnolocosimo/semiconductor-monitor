@@ -1,29 +1,28 @@
 name: Update semiconductor monitor
 on:
   schedule:
-    # Two UTC slots handle Amsterdam CET/CEST; Python gates exact local 22:00.
     - cron: '0 20 * * 1-5'
     - cron: '0 21 * * 1-5'
   workflow_dispatch:
 permissions:
   contents: write
 jobs:
-  refresh:
+  update:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-          cache: pip
       - run: pip install -r requirements.txt
-      - name: Refresh published dataset
+      - name: Refresh prices and SEC 13F
         env:
           SCHEDULE_EVENT: ${{ github.event_name }}
         run: python update.py
-      - name: Commit dataset when changed
+      - name: Commit new observations
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/latest.json
-          git diff --cached --quiet || (git commit -m 'Update semiconductor market monitor' && git push)
+          git add data/latest.json data/curated.json
+          git diff --cached --quiet || (git commit -m 'Refresh semiconductor evidence' && git push)
