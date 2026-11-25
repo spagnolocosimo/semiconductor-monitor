@@ -1,11 +1,252 @@
 {
-  "generated_at_amsterdam": "2026-11-25 09:28 CET (curated baseline)",
-  "price_as_of": "Awaiting first live update",
-  "price_fresh": false,
-  "signal": "UNKNOWN",
-  "headline": "Run GitHub Actions to update prices and SEC filings",
-  "reason": "ETF.com dated observations, ARK trades and verified Appaloosa filings are already available below.",
-  "assets": [],
+  "generated_at_amsterdam": "2026-11-25 10:28 CET",
+  "price_as_of": "2026-11-24",
+  "price_fresh": true,
+  "signal": "RED",
+  "headline": "Recovery NOT confirmed",
+  "reason": "Dated flows are partial, institutional daily transactions cover ARK only; quarterly 13Fs are lagged. GREEN is deliberately withheld until independent confirmation.",
+  "assets": [
+    {
+      "ticker": "SMH",
+      "last_close": 426.75,
+      "four_closes": [
+        463.96,
+        486.75,
+        400.06,
+        426.75
+      ],
+      "three_week_return": -0.0802,
+      "signal": "RED",
+      "as_of": "2026-11-24",
+      "history": [
+        560.4199829101562,
+        553.1099853515625,
+        567.010009765625,
+        568.530029296875,
+        573.0,
+        606.5599975585938,
+        630.5999755859375,
+        603.3300170898438,
+        539.7899780273438,
+        527.2000122070312,
+        522.489990234375,
+        463.9599914550781,
+        486.75,
+        400.05999755859375,
+        426.75
+      ]
+    },
+    {
+      "ticker": "SOXX",
+      "last_close": 128.62,
+      "four_closes": [
+        136.53,
+        149.3,
+        123.4,
+        128.62
+      ],
+      "three_week_return": -0.05794,
+      "signal": "RED",
+      "as_of": "2026-11-24",
+      "history": [
+        173.35000610351562,
+        169.5399932861328,
+        173.2866668701172,
+        175.69000244140625,
+        177.69000244140625,
+        190.89332580566406,
+        196.3000030517578,
+        186.46665954589844,
+        164.4633331298828,
+        159.39999389648438,
+        157.1699981689453,
+        136.52999877929688,
+        149.3000030517578,
+        123.4000015258789,
+        128.6199951171875
+      ]
+    },
+    {
+      "ticker": "MU",
+      "last_close": 629.79,
+      "four_closes": [
+        690.0,
+        778.31,
+        594.51,
+        629.79
+      ],
+      "three_week_return": -0.08726,
+      "signal": "RED",
+      "as_of": "2026-11-24",
+      "history": [
+        966.780029296875,
+        932.8599853515625,
+        1016.5900268554688,
+        975.260009765625,
+        1015.7999877929688,
+        1082.280029296875,
+        1074.8900146484375,
+        1029.0,
+        878.8400268554688,
+        877.5499877929688,
+        884.739990234375,
+        690.0,
+        778.3099975585938,
+        594.510009765625,
+        629.7899780273438
+      ]
+    },
+    {
+      "ticker": "NVDA",
+      "last_close": 155.38,
+      "four_closes": [
+        186.64,
+        162.85,
+        125.53,
+        155.38
+      ],
+      "three_week_return": -0.16749,
+      "signal": "RED",
+      "as_of": "2026-11-24",
+      "history": [
+        214.72000122070312,
+        217.5500030517578,
+        230.36000061035156,
+        218.2899932861328,
+        222.27000427246094,
+        225.07000732421875,
+        233.9499969482422,
+        229.27999877929688,
+        214.1300048828125,
+        210.9600067138672,
+        204.63999938964844,
+        186.63999938964844,
+        162.85000610351562,
+        125.52999877929688,
+        155.3800048828125
+      ]
+    },
+    {
+      "ticker": "TSM",
+      "last_close": 349.2,
+      "four_closes": [
+        375.44,
+        398.73,
+        318.71,
+        349.2
+      ],
+      "three_week_return": -0.06989,
+      "signal": "RED",
+      "as_of": "2026-11-24",
+      "history": [
+        418.95001220703125,
+        417.5199890136719,
+        428.9100036621094,
+        433.239990234375,
+        434.6700134277344,
+        450.6099853515625,
+        472.7799987792969,
+        453.30999755859375,
+        412.6099853515625,
+        418.510009765625,
+        406.1300048828125,
+        375.44000244140625,
+        398.7300109863281,
+        318.7099914550781,
+        349.20001220703125
+      ]
+    },
+    {
+      "ticker": "ASML",
+      "last_close": 1336.06,
+      "four_closes": [
+        1424.75,
+        1495.16,
+        1266.22,
+        1336.06
+      ],
+      "three_week_return": -0.06225,
+      "signal": "RED",
+      "as_of": "2026-11-24",
+      "history": [
+        1763.760009765625,
+        1696.1600341796875,
+        1714.8800048828125,
+        1698.300048828125,
+        1679.9200439453125,
+        1743.93994140625,
+        1867.31005859375,
+        1780.3399658203125,
+        1641.52001953125,
+        1571.800048828125,
+        1565.9000244140625,
+        1424.75,
+        1495.1600341796875,
+        1266.219970703125,
+        1336.06005859375
+      ]
+    },
+    {
+      "ticker": "AMAT",
+      "last_close": 323.76,
+      "four_closes": [
+        332.72,
+        370.5,
+        302.63,
+        323.76
+      ],
+      "three_week_return": -0.02693,
+      "signal": "YELLOW",
+      "as_of": "2026-11-24",
+      "history": [
+        492.32000732421875,
+        461.6700134277344,
+        454.7099914550781,
+        456.489990234375,
+        444.57000732421875,
+        485.0,
+        540.0399780273438,
+        507.0299987792969,
+        409.2900085449219,
+        377.239990234375,
+        390.0899963378906,
+        332.7200012207031,
+        370.5,
+        302.6300048828125,
+        323.760009765625
+      ]
+    },
+    {
+      "ticker": "LRCX",
+      "last_close": 196.16,
+      "four_closes": [
+        200.44,
+        225.92,
+        183.27,
+        196.16
+      ],
+      "three_week_return": -0.02135,
+      "signal": "YELLOW",
+      "as_of": "2026-11-24",
+      "history": [
+        314.0,
+        301.8999938964844,
+        307.6499938964844,
+        298.2200012207031,
+        288.1099853515625,
+        315.2099914550781,
+        347.489990234375,
+        318.8399963378906,
+        263.94000244140625,
+        230.10000610351562,
+        239.11000061035156,
+        200.44000244140625,
+        225.9199981689453,
+        183.27000427246094,
+        196.16000366210938
+      ]
+    }
+  ],
   "flows": [
     {
       "date": "2026-11-10",
@@ -95,6 +336,33 @@
   "filings": [
     {
       "manager": "Appaloosa",
+      "ticker": "AMAT",
+      "q2": 0,
+      "q3": 225000,
+      "source": "https://www.sec.gov/Archives/edgar/data/1656456/000165645626000004/xslForm13F_X02/Form13FInfoTable.xml",
+      "period": "2026-09-30",
+      "quality": "SEC information table Q2/Q3 checked"
+    },
+    {
+      "manager": "Appaloosa",
+      "ticker": "ASML",
+      "q2": 50000,
+      "q3": 65000,
+      "source": "https://www.sec.gov/Archives/edgar/data/1656456/000165645626000004/xslForm13F_X02/Form13FInfoTable.xml",
+      "period": "2026-09-30",
+      "quality": "SEC information table Q2/Q3 checked"
+    },
+    {
+      "manager": "Appaloosa",
+      "ticker": "LRCX",
+      "q2": 382500,
+      "q3": 625000,
+      "source": "https://www.sec.gov/Archives/edgar/data/1656456/000165645626000004/xslForm13F_X02/Form13FInfoTable.xml",
+      "period": "2026-09-30",
+      "quality": "SEC information table Q2/Q3 checked"
+    },
+    {
+      "manager": "Appaloosa",
       "ticker": "MU",
       "q2": 975000,
       "q3": 1250000,
@@ -119,35 +387,25 @@
       "source": "https://www.sec.gov/Archives/edgar/data/1656456/000165645626000004/xslForm13F_X02/Form13FInfoTable.xml",
       "period": "2026-09-30",
       "quality": "SEC information table Q2/Q3 checked"
-    },
-    {
-      "manager": "Appaloosa",
-      "ticker": "ASML",
-      "q2": 50000,
-      "q3": 65000,
-      "source": "https://www.sec.gov/Archives/edgar/data/1656456/000165645626000004/xslForm13F_X02/Form13FInfoTable.xml",
-      "period": "2026-09-30",
-      "quality": "SEC information table Q2/Q3 checked"
-    },
-    {
-      "manager": "Appaloosa",
-      "ticker": "AMAT",
-      "q2": 0,
-      "q3": 225000,
-      "source": "https://www.sec.gov/Archives/edgar/data/1656456/000165645626000004/xslForm13F_X02/Form13FInfoTable.xml",
-      "period": "2026-09-30",
-      "quality": "SEC information table Q2/Q3 checked"
-    },
-    {
-      "manager": "Appaloosa",
-      "ticker": "LRCX",
-      "q2": 382500,
-      "q3": 625000,
-      "source": "https://www.sec.gov/Archives/edgar/data/1656456/000165645626000004/xslForm13F_X02/Form13FInfoTable.xml",
-      "period": "2026-09-30",
-      "quality": "SEC information table Q2/Q3 checked"
     }
   ],
-  "sec_errors": [],
-  "sec_managers_updated": []
+  "sec_managers_updated": [],
+  "sec_errors": [
+    "Appaloosa: HTTP Error 403: Forbidden",
+    "Bridgewater Associates: HTTP Error 403: Forbidden",
+    "Tiger Global: HTTP Error 403: Forbidden",
+    "Duquesne Family Office: HTTP Error 403: Forbidden",
+    "Berkshire Hathaway: HTTP Error 403: Forbidden",
+    "Citadel Advisors: HTTP Error 403: Forbidden",
+    "Renaissance Technologies: HTTP Error 403: Forbidden",
+    "Millennium Management: HTTP Error 403: Forbidden",
+    "Coatue Management: HTTP Error 403: Forbidden",
+    "Point72 Asset Management: HTTP Error 403: Forbidden",
+    "Soros Fund Management: HTTP Error 403: Forbidden",
+    "ARK Investment Management: HTTP Error 403: Forbidden",
+    "BlackRock: HTTP Error 403: Forbidden",
+    "Vanguard Group: HTTP Error 403: Forbidden",
+    "State Street: HTTP Error 403: Forbidden"
+  ],
+  "source_note": "Market prices Yahoo Finance; flows ETF.com; dated ARK events third-party; SEC holdings directly parsed when available."
 }
