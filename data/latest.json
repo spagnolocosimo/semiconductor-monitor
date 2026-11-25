@@ -1,142 +1,97 @@
 {
-  "generated_at_amsterdam": "2026-11-23 14:06 CET",
-  "price_as_of": "2026-11-20",
-  "signal": "RED",
-  "headline": "Semiconductor recovery not confirmed",
-  "reason": "Price signals are updated automatically. Institutional flows/trades remain unconfirmed unless dated primary-source evidence has been added.",
-  "gates": [
+  "generated_at_amsterdam": "2026-11-25 09:28 CET (curated baseline)",
+  "price_as_of": "Awaiting first live update",
+  "price_fresh": false,
+  "signal": "UNKNOWN",
+  "headline": "Run GitHub Actions to update prices and SEC filings",
+  "reason": "ETF.com dated observations, ARK trades and verified Appaloosa filings are already available below.",
+  "assets": [],
+  "flows": [
     {
-      "name": "Both ETF price trends",
-      "status": "RED",
-      "detail": "3 weeks above 4-week mean, no new 13-week lows"
-    },
-    {
-      "name": "Verified weekly ETF flows",
-      "status": "YELLOW",
-      "detail": "0 positive documented week(s); need 2"
-    },
-    {
-      "name": "Dated large-investor net buying",
-      "status": "YELLOW",
-      "detail": "0 distinct confirmed manager(s); need 2"
-    }
-  ],
-  "assets": [
-    {
-      "ticker": "SMH",
-      "role": "Market ETF",
-      "last_close": 400.06,
-      "four_closes": [
-        522.49,
-        463.96,
-        486.75,
-        400.06
-      ],
-      "three_week_return": -0.23432,
-      "signal": "RED",
-      "note": "Price trend only; flow and fund trade confirmation separate."
-    },
-    {
+      "date": "2026-11-10",
       "ticker": "SOXX",
-      "role": "Market ETF",
-      "last_close": 123.4,
-      "four_closes": [
-        157.17,
-        136.53,
-        149.3,
-        123.4
-      ],
-      "three_week_return": -0.21486,
-      "signal": "RED",
-      "note": "Price trend only; flow and fund trade confirmation separate."
+      "usd_m": 3976.38,
+      "source": "https://www.etf.com/sections/daily-etf-flows/daily-etf-flows-4b-flows-soxx",
+      "quality": "ETF.com explicitly states flows for November 10"
     },
     {
-      "ticker": "MU",
-      "role": "HBM / memory",
-      "last_close": 594.51,
-      "four_closes": [
-        884.74,
-        690.0,
-        778.31,
-        594.51
-      ],
-      "three_week_return": -0.32804,
-      "signal": "RED",
-      "note": "Price trend only; flow and fund trade confirmation separate."
+      "date": "2026-11-10",
+      "ticker": "SMH",
+      "usd_m": 1291.16,
+      "source": "https://www.etf.com/sections/daily-etf-flows/daily-etf-flows-4b-flows-soxx",
+      "quality": "ETF.com explicitly states flows for November 10"
     },
     {
-      "ticker": "NVDA",
-      "role": "AI accelerators",
-      "last_close": 125.53,
-      "four_closes": [
-        204.64,
-        186.64,
-        162.85,
-        125.53
-      ],
-      "three_week_return": -0.38658,
-      "signal": "RED",
-      "note": "Price trend only; flow and fund trade confirmation separate."
+      "date": "2026-11-09",
+      "ticker": "SOXX",
+      "usd_m": -4131.02,
+      "source": "https://www.etf.com/sections/daily-etf-flows/etf-fund-flows-nov-10-2026-spy-soxx-shed-83b-qqq-adds-24b",
+      "quality": "ETF.com reported daily net creations/redemptions; article date Nov 10, trade date inferred as previous session"
     },
     {
-      "ticker": "TSM",
-      "role": "Foundry",
-      "last_close": 318.71,
-      "four_closes": [
-        406.13,
-        375.44,
-        398.73,
-        318.71
-      ],
-      "three_week_return": -0.21525,
-      "signal": "RED",
-      "note": "Price trend only; flow and fund trade confirmation separate."
-    },
-    {
-      "ticker": "ASML",
-      "role": "Lithography",
-      "last_close": 1266.22,
-      "four_closes": [
-        1565.9,
-        1424.75,
-        1495.16,
-        1266.22
-      ],
-      "three_week_return": -0.19138,
-      "signal": "RED",
-      "note": "Price trend only; flow and fund trade confirmation separate."
-    },
-    {
-      "ticker": "AMAT",
-      "role": "Equipment",
-      "last_close": 302.63,
-      "four_closes": [
-        390.09,
-        332.72,
-        370.5,
-        302.63
-      ],
-      "three_week_return": -0.2242,
-      "signal": "RED",
-      "note": "Price trend only; flow and fund trade confirmation separate."
-    },
-    {
-      "ticker": "LRCX",
-      "role": "Equipment",
-      "last_close": 183.27,
-      "four_closes": [
-        239.11,
-        200.44,
-        225.92,
-        183.27
-      ],
-      "three_week_return": -0.23353,
-      "signal": "RED",
-      "note": "Price trend only; flow and fund trade confirmation separate."
+      "date": "2026-11-09",
+      "ticker": "SMH",
+      "usd_m": -1044.04,
+      "source": "https://www.etf.com/sections/daily-etf-flows/etf-fund-flows-nov-10-2026-spy-soxx-shed-83b-qqq-adds-24b",
+      "quality": "ETF.com reported daily net creations/redemptions; article date Nov 10, trade date inferred as previous session"
     }
   ],
-  "flows": [],
-  "trades": [],
+  "trades": [
+    {
+      "date": "2026-11-24",
+      "manager": "ARKK (ARK Invest)",
+      "ticker": "META",
+      "action": "SELL",
+      "usd_m": 13.8,
+      "source": "https://cathiesark.com/arkk/trades",
+      "quality": "Third-party dated ARK trade tracker; not SEC-verified"
+    },
+    {
+      "date": "2026-11-20",
+      "manager": "ARKK (ARK Invest)",
+      "ticker": "NVDA",
+      "action": "SELL",
+      "usd_m": 12.9,
+      "source": "https://cathiesark.com/arkk/trades",
+      "quality": "Third-party dated ARK trade tracker; not SEC-verified"
+    },
+    {
+      "date": "2026-11-20",
+      "manager": "ARKK (ARK Invest)",
+      "ticker": "AMD",
+      "action": "BUY",
+      "usd_m": 16.6,
+      "source": "https://cathiesark.com/arkk/trades",
+      "quality": "Third-party dated ARK trade tracker; not SEC-verified"
+    },
+    {
+      "date": "2026-11-20",
+      "manager": "ARKK (ARK Invest)",
+      "ticker": "CRWV",
+      "action": "BUY",
+      "usd_m": 17.1,
+      "source": "https://cathiesark.com/arkk/trades",
+      "quality": "Third-party dated ARK trade tracker; not SEC-verified"
+    },
+    {
+      "date": "2026-11-16",
+      "manager": "ARKK (ARK Invest)",
+      "ticker": "NVDA",
+      "action": "SELL",
+      "usd_m": 78.3,
+      "source": "https://cathiesark.com/arkk/trades",
+      "quality": "Third-party dated ARK trade tracker; not SEC-verified"
+    },
+    {
+      "date": "2026-11-09",
+      "manager": "ARKK (ARK Invest)",
+      "ticker": "NVDA",
+      "action": "BUY",
+      "usd_m": 9.1,
+      "source": "https://cathiesark.com/arkk/trades",
+      "quality": "Third-party dated ARK trade tracker; not SEC-verified"
+    }
+  ],
   "filings": [
     {
       "manager": "Appaloosa",
@@ -144,7 +99,8 @@
       "q2": 975000,
       "q3": 1250000,
       "source": "https://www.sec.gov/Archives/edgar/data/1656456/000165645626000004/xslForm13F_X02/Form13FInfoTable.xml",
-      "verified": true
+      "period": "2026-09-30",
+      "quality": "SEC information table Q2/Q3 checked"
     },
     {
       "manager": "Appaloosa",
@@ -152,7 +108,8 @@
       "q2": 1525000,
       "q3": 2000000,
       "source": "https://www.sec.gov/Archives/edgar/data/1656456/000165645626000004/xslForm13F_X02/Form13FInfoTable.xml",
-      "verified": true
+      "period": "2026-09-30",
+      "quality": "SEC information table Q2/Q3 checked"
     },
     {
       "manager": "Appaloosa",
@@ -160,7 +117,8 @@
       "q2": 1650000,
       "q3": 1575000,
       "source": "https://www.sec.gov/Archives/edgar/data/1656456/000165645626000004/xslForm13F_X02/Form13FInfoTable.xml",
-      "verified": true
+      "period": "2026-09-30",
+      "quality": "SEC information table Q2/Q3 checked"
     },
     {
       "manager": "Appaloosa",
@@ -168,7 +126,8 @@
       "q2": 50000,
       "q3": 65000,
       "source": "https://www.sec.gov/Archives/edgar/data/1656456/000165645626000004/xslForm13F_X02/Form13FInfoTable.xml",
-      "verified": true
+      "period": "2026-09-30",
+      "quality": "SEC information table Q2/Q3 checked"
     },
     {
       "manager": "Appaloosa",
@@ -176,7 +135,8 @@
       "q2": 0,
       "q3": 225000,
       "source": "https://www.sec.gov/Archives/edgar/data/1656456/000165645626000004/xslForm13F_X02/Form13FInfoTable.xml",
-      "verified": true
+      "period": "2026-09-30",
+      "quality": "SEC information table Q2/Q3 checked"
     },
     {
       "manager": "Appaloosa",
@@ -184,8 +144,10 @@
       "q2": 382500,
       "q3": 625000,
       "source": "https://www.sec.gov/Archives/edgar/data/1656456/000165645626000004/xslForm13F_X02/Form13FInfoTable.xml",
-      "verified": true
+      "period": "2026-09-30",
+      "quality": "SEC information table Q2/Q3 checked"
     }
   ],
-  "data_note": "Price feed Yahoo Finance (yfinance); do not assume exchange-verified or intraday completion."
+  "sec_errors": [],
+  "sec_managers_updated": []
 }

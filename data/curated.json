@@ -1,0 +1,24 @@
+{
+ "flows":[
+  {"date":"2026-11-09","ticker":"SOXX","usd_m":-4131.02,"source":"https://www.etf.com/sections/daily-etf-flows/etf-fund-flows-nov-10-2026-spy-soxx-shed-83b-qqq-adds-24b","quality":"ETF.com reported daily net creations/redemptions; article date Nov 10, trade date inferred as previous session"},
+  {"date":"2026-11-09","ticker":"SMH","usd_m":-1044.04,"source":"https://www.etf.com/sections/daily-etf-flows/etf-fund-flows-nov-10-2026-spy-soxx-shed-83b-qqq-adds-24b","quality":"ETF.com reported daily net creations/redemptions; article date Nov 10, trade date inferred as previous session"},
+  {"date":"2026-11-10","ticker":"SOXX","usd_m":3976.38,"source":"https://www.etf.com/sections/daily-etf-flows/daily-etf-flows-4b-flows-soxx","quality":"ETF.com explicitly states flows for November 10"},
+  {"date":"2026-11-10","ticker":"SMH","usd_m":1291.16,"source":"https://www.etf.com/sections/daily-etf-flows/daily-etf-flows-4b-flows-soxx","quality":"ETF.com explicitly states flows for November 10"}
+ ],
+ "trades":[
+  {"date":"2026-11-09","manager":"ARKK (ARK Invest)","ticker":"NVDA","action":"BUY","usd_m":9.1,"source":"https://cathiesark.com/arkk/trades","quality":"Third-party dated ARK trade tracker; not SEC-verified"},
+  {"date":"2026-11-16","manager":"ARKK (ARK Invest)","ticker":"NVDA","action":"SELL","usd_m":78.3,"source":"https://cathiesark.com/arkk/trades","quality":"Third-party dated ARK trade tracker; not SEC-verified"},
+  {"date":"2026-11-20","manager":"ARKK (ARK Invest)","ticker":"NVDA","action":"SELL","usd_m":12.9,"source":"https://cathiesark.com/arkk/trades","quality":"Third-party dated ARK trade tracker; not SEC-verified"},
+  {"date":"2026-11-20","manager":"ARKK (ARK Invest)","ticker":"AMD","action":"BUY","usd_m":16.6,"source":"https://cathiesark.com/arkk/trades","quality":"Third-party dated ARK trade tracker; not SEC-verified"},
+  {"date":"2026-11-20","manager":"ARKK (ARK Invest)","ticker":"CRWV","action":"BUY","usd_m":17.1,"source":"https://cathiesark.com/arkk/trades","quality":"Third-party dated ARK trade tracker; not SEC-verified"},
+  {"date":"2026-11-24","manager":"ARKK (ARK Invest)","ticker":"META","action":"SELL","usd_m":13.8,"source":"https://cathiesark.com/arkk/trades","quality":"Third-party dated ARK trade tracker; not SEC-verified"}
+ ],
+ "filings":[
+  {"manager":"Appaloosa","ticker":"MU","q2":975000,"q3":1250000,"source":"https://www.sec.gov/Archives/edgar/data/1656456/000165645626000004/xslForm13F_X02/Form13FInfoTable.xml","period":"2026-09-30","quality":"SEC information table Q2/Q3 checked"},
+  {"manager":"Appaloosa","ticker":"NVDA","q2":1525000,"q3":2000000,"source":"https://www.sec.gov/Archives/edgar/data/1656456/000165645626000004/xslForm13F_X02/Form13FInfoTable.xml","period":"2026-09-30","quality":"SEC information table Q2/Q3 checked"},
+  {"manager":"Appaloosa","ticker":"TSM","q2":1650000,"q3":1575000,"source":"https://www.sec.gov/Archives/edgar/data/1656456/000165645626000004/xslForm13F_X02/Form13FInfoTable.xml","period":"2026-09-30","quality":"SEC information table Q2/Q3 checked"},
+  {"manager":"Appaloosa","ticker":"ASML","q2":50000,"q3":65000,"source":"https://www.sec.gov/Archives/edgar/data/1656456/000165645626000004/xslForm13F_X02/Form13FInfoTable.xml","period":"2026-09-30","quality":"SEC information table Q2/Q3 checked"},
+  {"manager":"Appaloosa","ticker":"AMAT","q2":0,"q3":225000,"source":"https://www.sec.gov/Archives/edgar/data/1656456/000165645626000004/xslForm13F_X02/Form13FInfoTable.xml","period":"2026-09-30","quality":"SEC information table Q2/Q3 checked"},
+  {"manager":"Appaloosa","ticker":"LRCX","q2":382500,"q3":625000,"source":"https://www.sec.gov/Archives/edgar/data/1656456/000165645626000004/xslForm13F_X02/Form13FInfoTable.xml","period":"2026-09-30","quality":"SEC information table Q2/Q3 checked"}
+ ]
+}
