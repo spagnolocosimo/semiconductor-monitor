@@ -1,74 +1,100 @@
-"""Refresh public price observations. Dated flow/trade evidence is curated, never guessed."""
-import json,os
-from datetime import datetime,timedelta,time
+"""Market data and SEC 13F refresh; safe fallbacks and explicit provenance."""
+import json, os, re, time, xml.etree.ElementTree as ET
 from pathlib import Path
+from datetime import datetime
 from zoneinfo import ZoneInfo
-from collections import defaultdict
+from urllib.request import Request,urlopen
 ROOT=Path(__file__).parent
-NOW=datetime.now(ZoneInfo('Europe/Amsterdam'))
-if os.environ.get('SCHEDULE_EVENT')=='schedule' and (NOW.weekday()>4 or NOW.hour!=22):
- print('Not the Amsterdam 22:00 slot; skipping.');raise SystemExit(0)
-WATCH={'SMH':'Market ETF','SOXX':'Market ETF','MU':'HBM / memory','NVDA':'AI accelerators','TSM':'Foundry','ASML':'Lithography','AMAT':'Equipment','LRCX':'Equipment'}
-# No stale snapshot is ever relabeled as today's prices.
-old_path=ROOT/'data/latest.json'
-old=json.loads(old_path.read_text()) if old_path.exists() else {}
-assets=[];maxdate=None;histories={}
+WATCH=['SMH','SOXX','MU','NVDA','TSM','ASML','AMAT','LRCX']
+CUSIPS={'MU':'595112103','NVDA':'67066G104','TSM':'874039100','ASML':'N07059210','AMAT':'038222105','LRCX':'512807306'}
+now=datetime.now(ZoneInfo('Europe/Amsterdam'))
+if os.environ.get('SCHEDULE_EVENT')=='schedule' and (now.weekday()>4 or now.hour!=22):raise SystemExit('Wrong Amsterdam slot')
+def get(url):
+ req=Request(url,headers={'User-Agent':'Cosimo Spagnolo semiconductor research contact: github.com/spagnolocosimo','Accept-Encoding':'identity'})
+ with urlopen(req,timeout=16) as r:return r.read()
+def readjson(path,default):
+ try:return json.loads(path.read_text())
+ except Exception:return default
+cur=readjson(ROOT/'data/curated.json',{})
+old=readjson(ROOT/'data/latest.json',{})
+prices=old.get('assets',[]);price_asof=old.get('price_as_of','Not available');price_fresh=False
 try:
  import yfinance as yf
+ df=yf.download(WATCH,period='7mo',interval='1d',auto_adjust=False,progress=False,threads=False)
  import pandas as pd
- # One download, auto_adjust=False to keep close prices in reported USD units.
- result=yf.download(list(WATCH),period='7mo',interval='1d',auto_adjust=False,progress=False,threads=False)
- for ticker,role in WATCH.items():
+ today_ny=datetime.now(ZoneInfo('America/New_York')).date()
+ new=[];dates=[]
+ for t in WATCH:
   try:
-   sub=result['Close'][ticker].dropna() if hasattr(result['Close'],'columns') else result['Close'].dropna()
-   # At 22 Amsterdam, NYSE may be open: include only trading dates strictly earlier than today's NY date.
-   ny_today=datetime.now(ZoneInfo('America/New_York')).date()
-   sub=sub[[x.date()<ny_today for x in sub.index]]
-   weekly=sub.resample('W-FRI').last().dropna()
-   dates=[x.date().isoformat() for x in weekly.index]
-   vals=[round(float(v),4) for v in weekly.values]
-   histories[ticker]=dict(dates=dates,values=vals)
-   if len(sub):maxdate=max(maxdate or sub.index[-1].date(),sub.index[-1].date())
-  except Exception as exc:print('Ticker error',ticker,exc)
-except Exception as exc:print('Price feed unavailable:',exc)
-# Curated records must carry direct source, date and confidence. Never auto-create from prices.
-evidence_path=ROOT/'data/curated_evidence.json'
-curated=json.loads(evidence_path.read_text()) if evidence_path.exists() else {'flows':[],'trades':[],'filings':[]}
-flows=[x for x in curated.get('flows',[]) if x.get('source') and x.get('verified') is True]
-trades=[x for x in curated.get('trades',[]) if x.get('source') and x.get('verified') is True]
-filings=[x for x in curated.get('filings',[]) if x.get('source') and x.get('verified') is True]
-for ticker,role in WATCH.items():
- h=histories.get(ticker,{});v=h.get('values',[]);dates=h.get('dates',[])
- recent=(maxdate is not None and dates and (maxdate-datetime.fromisoformat(dates[-1]).date()).days<=7)
- four=v[-4:] if len(v)>=4 and recent else []
- ret=four[-1]/four[0]-1 if len(four)==4 else None
- if ret is None:signal='UNKNOWN'
- elif ret<-.05:signal='RED'
- elif ret<=.02:signal='YELLOW'
- else:signal='YELLOW' # Price recovery alone cannot make institutional GREEN.
- assets.append(dict(ticker=ticker,role=role,last_close=round(v[-1],2) if recent else None,four_closes=[round(x,2) for x in four] if len(four)==4 else [None]*4,three_week_return=round(ret,5) if ret is not None else None,signal=signal,note='Price trend only; flow and fund trade confirmation separate.'))
-# 3-week completed window: weekly ETF flows for BOTH benchmarks must be verified.
-benchmark=['SMH','SOXX'];price_ok=True
-for t in benchmark:
- h=histories.get(t,{});v=h.get('values',[])
- if len(v)<14 or not maxdate:price_ok=False;continue
- # last 3 weeks each above trailing 4-week mean and no new 13-week lows
- for j in range(-3,0):
-  ix=len(v)+j
-  if v[ix] <= sum(v[ix-3:ix+1])/4 or v[ix]<=min(v[ix-12:ix]):price_ok=False
-recent_flow=[f for f in flows if f.get('ticker') in benchmark and f.get('window_end') and maxdate and 0<=(maxdate-datetime.fromisoformat(f['window_end']).date()).days<=21 and f.get('window_type')=='full_week']
-positive_weeks={f['window_end'] for f in recent_flow if f.get('net_usd_m',0)>0}
-flow_ok=len(positive_weeks)>=2 and {x['ticker'] for x in recent_flow}==set(benchmark)
-recent_trades=[t for t in trades if t.get('date') and maxdate and 0<=(maxdate-datetime.fromisoformat(t['date']).date()).days<=21 and t.get('ticker') in WATCH and t.get('action')=='BUY' and t.get('net_buying_verified') is True]
-trade_ok=len({t['manager'] for t in recent_trades})>=2
-if maxdate is None:overall='UNKNOWN'
-elif price_ok and flow_ok and trade_ok:overall='GREEN'
-elif any(a['signal']=='RED' for a in assets[:2]):overall='RED'
-else:overall='YELLOW'
-headline={'GREEN':'Recovery criteria met','YELLOW':'Potential stabilization; buying not confirmed','RED':'Semiconductor recovery not confirmed','UNKNOWN':'Insufficient fresh market data'}[overall]
-gates=[dict(name='Both ETF price trends',status='GREEN' if price_ok else 'RED' if any(a['signal']=='RED' for a in assets[:2]) else 'YELLOW',detail='3 weeks above 4-week mean, no new 13-week lows'),dict(name='Verified weekly ETF flows',status='GREEN' if flow_ok else 'YELLOW',detail=f'{len(positive_weeks)} positive documented week(s); need 2'),dict(name='Dated large-investor net buying',status='GREEN' if trade_ok else 'YELLOW',detail=f'{len(set(t["manager"] for t in recent_trades))} distinct confirmed manager(s); need 2')]
-out={'generated_at_amsterdam':NOW.strftime('%Y-%m-%d %H:%M %Z'),'price_as_of':maxdate.isoformat() if maxdate else old.get('price_as_of'),'signal':overall,'headline':headline,'reason':'Price signals are updated automatically. Institutional flows/trades remain unconfirmed unless dated primary-source evidence has been added.','gates':gates,'assets':assets,'flows':flows,'trades':trades,'filings':filings,'data_note':'Price feed Yahoo Finance (yfinance); do not assume exchange-verified or intraday completion.'}
-if maxdate is None and old.get('assets'):
- # Retain old observations but show stale status, never turn unavailable feed into false fresh prices.
- out['assets']=old['assets'];out['signal']='UNKNOWN';out['headline']='Price feed unavailable; showing last saved snapshot';out['reason']='No fresh market observations retrieved. Previously saved prices are historical only.'
-old_path.write_text(json.dumps(out,indent=2)+'\n');print('Updated',out['signal'],out['price_as_of'])
+   x=df['Close'][t].dropna();x=x[[i.date()<today_ny for i in x.index]]
+   wk=x.resample('W-FRI').last().dropna();v=list(map(float,wk.values));last=x.index[-1].date().isoformat();dates.append(last)
+   four=v[-4:] if len(v)>=4 else []
+   ret=four[-1]/four[0]-1 if len(four)==4 else None
+   status='RED' if ret is not None and ret<-.05 else 'YELLOW' if ret is not None else 'UNKNOWN'
+   new.append({'ticker':t,'last_close':round(v[-1],2),'four_closes':[round(z,2) for z in four],'three_week_return':round(ret,5) if ret is not None else None,'signal':status,'as_of':last,'history':v[-15:]})
+  except Exception as exc:print('Price missing',t,exc)
+ if len(new)>=6:prices=new;price_asof=min(dates);price_fresh=True
+except Exception as exc:print('Price feed unavailable',exc)
+# SEC filings: retrieve recent 13F submission metadata, then parse both information-table XMLs.
+# Fail closed: only replace a manager's rows when BOTH quarter tables were parsed.
+def tag(x):return x.tag.split('}')[-1].lower()
+def children(node,name):return [c for c in node.iter() if tag(c)==name.lower()]
+def parse_table(raw):
+ root=ET.fromstring(raw); entries=children(root,'infoTable'); result={}
+ for entry in entries:
+  def field(n):
+   found=children(entry,n);return (found[0].text or '').strip() if found else ''
+  cusip=field('cusip').upper(); putcall=field('putCall').upper()
+  if cusip not in CUSIPS.values() or putcall:continue
+  shares=field('sshPrnamt');unit=field('sshPrnamtType').upper()
+  if unit and unit!='SH':continue
+  try:result[cusip]=result.get(cusip,0)+int(float(shares.replace(',','')))
+  except ValueError:pass
+ if not entries:raise ValueError('No infoTable entries')
+ return result
+
+def filing(cik,period):
+ url=f'https://data.sec.gov/submissions/CIK{int(cik):010d}.json';data=json.loads(get(url));r=data['filings']['recent']
+ matches=[]
+ for i,(form,p) in enumerate(zip(r['form'],r['reportDate'])):
+  if form in ('13F-HR','13F-HR/A') and p==period:matches.append((r['filingDate'][i],r['accessionNumber'][i]))
+ if not matches:return None
+ _,acc=sorted(matches)[-1];base=f'https://www.sec.gov/Archives/edgar/data/{int(cik)}/{acc.replace("-", "")}/'
+ idx=json.loads(get(base+'index.json'));items=idx['directory']['item']
+ # Inspect XML roots, not guessed filenames. Avoid primary_doc.xml and submission metadata.
+ candidates=[z['name'] for z in items if z['name'].lower().endswith('.xml') and not z['name'].lower().startswith(('primary_doc','filing'))]
+ for name in candidates:
+  try:
+   raw=get(base+name)
+   if b'infoTable' in raw or b'infotable' in raw:
+    return parse_table(raw),base+name
+  except Exception:continue
+ return None
+
+existing=cur.get('filings',[])
+filings=list(existing);errors=[];updated_managers=[]
+if os.environ.get('SKIP_SEC')!='1':
+ for m in readjson(ROOT/'managers.json',[]):
+  try:
+   q2=filing(m['cik'],'2026-06-30');q3=filing(m['cik'],'2026-09-30')
+   if not q2 or not q3:raise ValueError('One or both information tables missing')
+   rows=[]
+   for t,c in CUSIPS.items():
+    a=q2[0].get(c,0);b=q3[0].get(c,0)
+    if a or b:rows.append({'manager':m['name'],'ticker':t,'q2':a,'q3':b,'source':q3[1],'q2_source':q2[1],'period':'2026-09-30','quality':'SEC XML Q2 and Q3 parsed; common shares only'})
+   filings=[x for x in filings if x['manager']!=m['name']]+rows
+   updated_managers.append(m['name']);print('SEC',m['name'],len(rows))
+  except Exception as exc:errors.append(f'{m["name"]}: {str(exc)[:95]}');print('SEC unavailable',errors[-1])
+  time.sleep(.2)
+# Save successful SEC rows to curated for resilience, but never replace on failure.
+if updated_managers:
+ cur['filings']=filings;(ROOT/'data/curated.json').write_text(json.dumps(cur,indent=2)+'\n')
+# ETF flows are *daily observations*, not full-week sums. Never count as weekly inflow confirmation.
+flows=sorted(cur.get('flows',[]),key=lambda x:x['date'],reverse=True)
+trades=sorted(cur.get('trades',[]),key=lambda x:x['date'],reverse=True)
+# No positive institutional-reentry verdict without full-week flow + 2 independent manager confirmations.
+red=sum(a.get('signal')=='RED' for a in prices if a.get('ticker') in ('SMH','SOXX'))
+signal='RED' if price_fresh and red else 'YELLOW' if price_fresh else 'UNKNOWN'
+out={'generated_at_amsterdam':now.strftime('%Y-%m-%d %H:%M %Z'),'price_as_of':price_asof,'price_fresh':price_fresh,'signal':signal,'headline':'Recovery NOT confirmed' if price_fresh else 'Fresh prices unavailable','reason':'Dated flows are partial, institutional daily transactions cover ARK only; quarterly 13Fs are lagged. GREEN is deliberately withheld until independent confirmation.','assets':prices,'flows':flows,'trades':trades,'filings':sorted(filings,key=lambda x:(x['manager'],x['ticker'])),'sec_managers_updated':updated_managers,'sec_errors':errors,'source_note':'Market prices Yahoo Finance; flows ETF.com; dated ARK events third-party; SEC holdings directly parsed when available.'}
+(ROOT/'data/latest.json').write_text(json.dumps(out,indent=2)+'\n')
+print('Complete',len(filings),'SEC holdings',len(flows),'flow events',len(trades),'trades')
